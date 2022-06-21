@@ -1,0 +1,78 @@
+<div class="reserv">
+    <h1>Edit Reservation</h1>
+    <form action="/editReservation/update/<%= reserv.b_id%>" method="post">
+        <div class="input">  
+            <label for="">First Name</label>
+            <input type="text" name="f_name" value="<%=reserv.f_name%>">
+        </div>
+        <div class="input">  
+            <label for="">Last Name</label>
+            <input type="text" name="l_name" value="<%=reserv.l_name%>">
+        </div>
+        <div class="input">  
+            <label for="">Email</label>
+            <input type="text" name="email" value="<%=reserv.email%>">
+        </div>
+        <div class="input">  
+            <label for="">Number of Guests</label>
+            <input type="number" name="num_guest" value="<%=reserv.num_guest%>">
+        </div>
+
+        <div class="input">  
+            <label for="">Program</label>
+            <div class="select" >
+                <select  name="program">
+                    <% info.forEach(function(data) {%>
+                        <option value="<%=data.id%>"><%=data.p_name%></option>
+                    <%})%>
+                </select>
+                <div class="select_arrow">
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="input">  
+            <label for="">Tour Company</label>
+            <div class="select" >
+                <select  name="t_comp">
+                    <% tInfo.forEach(function(data) {%>
+                        <option selected="selected" value="<%=data.id%>"><%=data.comp_name%></option>
+                    <%})%>
+                </select>
+                <div class="select_arrow">
+                </div>
+            </div>
+        </div>
+
+        <div class="input">  
+            <label for="">Hotel</label>
+            <div class="select">  
+                <select name="hotel">
+                    <% hInfo.forEach(function(data) {%>
+                        <option selected="selected" value="<%=data.id%>"><%=data.hotel_name%></option>
+                    <%})%>
+                </select>
+                <div class="select_arrow">
+                </div>
+            </div>
+        </div>
+        <div class="input">  
+            <label for="">Booked Date</label>
+            <input type="date" name="date" value="<%=reserv.date_booked%>">
+        </div>
+
+        <div class="input">  
+            <label for="">Payment Method</label>
+            <div class="select">  
+                <select name="pay" class="select">
+                    <option selected="selected" value="reserved">Reserved</option>
+                    <option value="credited">Credited</option>
+                </select>
+                <div class="select_arrow"></div>
+            </div>
+        </div>
+        <input type="submit" value="submit" class="submit">
+    </form>
+</div>

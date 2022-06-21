@@ -1,0 +1,33 @@
+<div class="addProgram">
+    <h1>Add Program</h1>
+    <form action="addProgram/add" method="post" enctype="multipart/form-data">
+        <div class="input">  
+            <label for="">Program Name</label>
+            <input type="text" name="p_name">
+        </div>
+        <div class="input">
+            <label for="">Cost</label>
+            <input type="number" name="cost">
+        </div>
+        <div class="des">
+            <label for="">Description</label>
+            <textarea id="desc" cols="25" rows="4" name="desc"></textarea>    
+        </div>
+        <div class="prevCon">
+            <div class="wrapper">
+                <div class="image">
+                    <img src="" alt="" id="upimg">
+                </div>
+                <div class="up-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="file-upload-text">
+                    No file chosen!
+                </div>
+            </div>
+            <input type="file" name="myimage" class="default-btn" accept="images/*"hidden>
+            <div onclick="defaultBtnActive()" id="custom-btn">Choose a file</div>
+        </div>
+        <input type="submit" value="submit" class="submit">
+    </form>
+</div>

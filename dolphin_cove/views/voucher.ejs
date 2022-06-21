@@ -1,0 +1,17 @@
+<div class="voucher">
+
+    <div class="voucherCon">
+       <div class="vbg">
+        <img src="https://cdn.discordapp.com/attachments/885520208280825886/984161282599035080/dolphincoveja-banner.jpg" alt="">
+       </div>
+       <div class="details">
+        <% voucher_stuff.forEach(data => { %>
+            <p>Name: <%= data.f_name%> <%= data.l_name%></p>
+            <p>Activity: <%= data.p_name%></p>
+            <p>Number of Guests: <%= data.p_name%></p>
+            <p>Cost Per Person: <%= data.cost %></p>
+            <p>Total: <%= data.total_cost %></p>
+            <%})%>
+       </div>
+    </div>
+</div>

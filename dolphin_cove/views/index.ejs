@@ -1,0 +1,39 @@
+<div class="content">
+    <div class="slideCon">
+        <div class="slider">
+            <div class="img1">
+                <div class="overlay">
+                    <h1>AMAZING BEACHES</h1>
+                </div>
+            </div>
+            <div class="img2">
+                <div class="overlay">
+                    <h1>EXHILARATING ATTRACTIONS</h1>
+                </div>
+            </div>
+            <div class="img4">
+                <div class="overlay">
+                    <h1>SWIM WITH DOLPHINS</h1>
+                </div>
+            </div>
+            <div class="img3"></div>
+        </div>
+    </div>
+</div>
+<div class="welcome">
+    <h1>Welcome to Dolphin Cove Jamaica</h1>
+    <h3>Part of the Dolphin Discovery Group, the largest dolphin company in the world</h3>
+</div>
+<div class="events">
+    <div class="eTitle">
+        <h2>OUR PROGRAMMES</h2>
+    </div>
+    <div class="eventInfo">
+        <% info.forEach(function(data){ %>
+            <div class="eventCard">
+                <img src="/uploads/<%= data.image%>" alt="">
+                <p><%= data.description%></p>
+            </div>
+        <%});%>
+    </div>
+</div>

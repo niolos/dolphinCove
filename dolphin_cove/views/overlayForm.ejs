@@ -1,0 +1,53 @@
+<div class="loginCon">
+    <div class="logImage">
+        <img src="/uploads/dolphinchan.jpg" alt="">
+    </div>
+    <form action="/addReservation/addReservation" method="post">
+        <div class="input">  
+            <label for="">First Name</label>
+            <input type="text" name="f_name">
+        </div>
+        <div class="input">  
+            <label for="">Last Name</label>
+            <input type="text" name="l_name">
+        </div>
+        <div class="input">  
+            <label for="">Email</label>
+            <input type="text" name="email">
+        </div>
+        <div class="input">  
+            <label for="">Number of Guests</label>
+            <input type="number" name="num_guest">
+        </div>
+
+        <div class="input">  
+            <label for="">Program</label>
+            <div class="select" >
+                <select name="program">
+                    <% info.forEach(function(data) {%>
+                        <option selected="selected" value="<%=data.id%>"><%=data.p_name%></option>
+                    <%})%>
+                </select>
+                <div class="select_arrow">
+                </div>
+            </div>
+            
+        </div>
+            <select  name="t_comp" hidden>
+                <option selected="selected" value="2"></option>
+            </select>
+        <div class="input">  
+            <label for="">Booked Date</label>
+            <input type="date" name="date">
+        </div>
+        <div class="input">  
+            <label for="">Card Number</label>
+            <input type="number" required>
+        </div>
+            <select name="pay"  hidden>
+                <option selected="selected" value="reserved">Reserved</option>
+            </select>
+            <input type="number" name="hotel" value="3" hidden>
+            <input type="submit" value="submit" class="submit">
+    </form>
+</div>

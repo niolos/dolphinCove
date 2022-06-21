@@ -1,0 +1,18 @@
+<div class="addProgram">
+    <h1>Edit Program</h1>
+    <form action="/editPro/update/<%= pro.id%>" method="post" enctype="multipart/form-data">
+        <div class="input">  
+            <label for="">Program Name</label>
+            <input type="text" name="p_name" value="<%=pro.p_name%>">
+        </div>
+        <div class="input">
+            <label for="">Cost</label>
+            <input type="number" name="cost" value="<%=pro.cost%>">
+        </div>
+        <div class="des">
+            <label for="">Description</label>
+            <textarea id="desc" cols="25" rows="4" name="desc"><%=pro.description%></textarea>    
+        </div>
+        <input type="submit" value="submit" class="submit">
+    </form>
+</div>

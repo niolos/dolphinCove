@@ -1,0 +1,33 @@
+<div class="bookingCon">
+    <h1>Reservations</h1>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Program</th>
+            <th>Tour Company</th>
+            <th>Booked Date</th>
+            <th>Payment Status</th>
+            <th colspan="2">Action</th>
+        </tr>
+        <% info.forEach(function(data) {%>
+                <tr>
+                    <td><%= data.f_name%></td>
+                    <td><%= data.l_name%></td>
+                    <td><%= data.p_name%></td>
+                    <td><%= data.comp_name%></td>
+                    <td><%= data.date_booked%></td>
+                    <td><%=data.payment%></td>
+                    <td><input type="hidden" value="<%data.b_id%>"></td>
+                    <td>
+                        <a href="/editReservation/<%=data.b_id%>">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                        <a href="editReservation/delete/<%=data.b_id%>">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+        <%})%>
+    </table>
+</div>

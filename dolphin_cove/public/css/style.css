@@ -1,0 +1,844 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background:rgb(36, 41, 85);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:rgb(30, 43, 158);
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+}
+
+@font-face {
+    font-family: "nav";
+    src: url(../fonts/OkashiRegular-L33Z3.ttf);
+}
+
+@font-face {
+    font-family: "slim";
+    src: url(../fonts/QuageraRegular-jEBD9.otf);
+}
+
+@font-face {
+    font-family: "water";
+    src: url(../fonts/Crimsonblackdemo-nR1PY.otf);
+}
+
+body{
+    max-width: 100%;
+    height:auto;
+    overflow-x: hidden;
+width:100%
+}
+
+header{
+    width:100vw;
+    height:10vh;
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 5%;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 9px 12px 0px rgba(0,0,0,0.75);
+    z-index: 10;
+}
+
+header .logo img{
+    width:70%
+}
+
+.log{
+    position: relative;
+    background-color: rgb(12, 165, 165);
+    width:90px;
+    height:40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    transition: 0.5s ease; 
+}
+
+.log:hover{
+    background-color: rgb(79, 231, 231);
+
+}
+
+.log a{
+    height:100%;
+    width:100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header a{
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: "nav";  
+}
+
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 30px;
+}
+
+
+.nav a{
+    font-size: 25px;
+    font-family: "nav";
+    color:rgb(0, 0, 0);
+}
+
+.content{
+    width:100vw;
+    height:75vh;
+    background-color: blueviolet;
+    overflow: hidden;
+}
+
+.slider{
+    display:flex;
+    position: relative;
+    width:100%;
+    height:100%;
+    animation: animate 13s ease-in infinite;
+}
+
+@keyframes animate {
+    0%{
+        left:0%
+    }
+    20%{
+        left:0%
+    }
+    25%{
+        left:-25%;
+    }
+    45%{
+        left:-25%
+    }
+    50%{
+        left:-50%;
+    }
+    70%{
+        left:-50%;
+    }
+    75%{
+        left:-75%;
+    }
+    95%{
+        left:-75%
+    }
+    100%{
+        left:-0;
+    }
+}
+
+.slideCon{
+    width:400%;
+    height:100%;
+    display: flex;
+    position:relative;
+   
+}
+
+
+
+.img1, .img2, .img3, .img4{
+    width:100%;
+    height:100%;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+
+.img1{
+    background-image: url(https://cdn.discordapp.com/attachments/885520208280825886/984161282146066462/locacion-Dolphin-Cove-Negril.jpg);
+}
+
+.img2{
+    background-image: url(https://cdn.discordapp.com/attachments/885520208280825886/984161282376761495/dolphincove-bannerlocacion.jpg);
+}
+
+.img3{
+    background-image: url(https://cdn.discordapp.com/attachments/885520208280825886/984161282599035080/dolphincoveja-banner.jpg);
+}
+
+.img4{
+    background-image: url(https://cdn.discordapp.com/attachments/885520208280825886/984161282871677048/locations-moon-palace-jamaica-grande.jpg);
+}
+
+.events{
+    width:100%;
+    height:auto;
+    max-width: 100%;
+    position: relative;
+}
+
+.eTitle{
+    width:35%;
+    font-family: "nav";
+    height:4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid orange;
+    font-size: 25px;
+    padding-left: 3rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+
+.eventInfo{
+    height:auto;
+    width:100%;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    column-gap: 9rem;
+    row-gap: 4rem;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.40);
+    padding:40px;
+}
+
+.eventCard{
+    height:27rem;
+    width:18rem;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 11px 1px rgba(0,0,0,0.59);
+    border-radius: 10px;
+    background-image: linear-gradient(135deg, transparent 0%, transparent 15%,rgba(21,37,203, 0.71) 15%, rgba(21,37,203, 0.71) 33%,transparent 33%, transparent 79%,rgba(36,62,210, 0.5) 79%, rgba(36,62,210, 0.5) 100%),linear-gradient(45deg, transparent 0%, transparent 52%,rgb(24,124,201) 52%, rgb(24,124,201) 77%,rgb(70,238,209) 77%, rgb(70,238,209) 87%,transparent 87%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+    color:rgb(2, 2, 71);
+    font-family: 'nav';
+    align-items: center;
+    text-align: center;
+    row-gap: 16px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.eventCard:hover{
+    margin-top: -40px;
+}
+
+
+.eventCard img{
+    width:100%;
+    height:55%;
+}
+
+.welcome{
+    width:100vw;
+    height:20vh;
+    background-color: rgb(25, 25, 58);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.6rem;
+    border-top: 1px solid white;
+}
+
+.welcome h1{
+    font-family: "slim";
+}
+
+.welcome h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.274);
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color:white;
+    position:relative;
+}
+
+.overlay h1{
+    width:65%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 70px;
+    font-family: "water";
+}
+
+.sidenav{
+    width:23%;
+    height:100vh;
+    background-color: orange;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:20px;
+    font-family: 'nav';
+    row-gap: 15px;
+    box-shadow: 10px 0px 24px -3px rgba(0,0,0,0.53);
+    z-index: 3;
+    color:rgb(3, 4, 56);
+
+}
+
+.sidenav h4{
+    color:rgba(5, 6, 110, 0.808);
+    font-size: 20px;
+}
+
+.sidenav h3{
+    font-size: 25px;
+}
+
+.divider{
+    width:70%;
+    height:1px;
+    background-color: grey;
+}
+
+.navLinks{
+    position:relative;
+    width:100%;
+    height:auto;
+    margin-top: 30px;
+}
+
+.navLinks a{
+    color:rgb(3, 4, 56);
+}
+
+.navLinks a:hover{
+    color:rgb(6, 9, 155);
+
+}
+
+.navLinks ul{
+    position:relative;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+    list-style: none;
+}
+
+.navLinks ul li a::after{
+    content:'';
+    transform:scale(0,1);
+    position: absolute;
+    width:60%;
+    height:0.18rem;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    left:20%;
+    top:117%;
+    background-color: rgba(0, 0, 87, 0.836);
+}
+
+.navLinks ul li a:hover::after{
+    transform: scale(1,1);
+}
+
+.navLinks ul li{
+    position:relative;
+    width:100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookingCon, .tourComp, .program, .addProgram, .addTour, .reserv, .voucher{
+    width:77%;
+    height:100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: radial-gradient(circle at 68% 88%, rgba(255,255,255, 0.06) 0%, rgba(255,255,255, 0.06) 68%,transparent 68%, transparent 100%),radial-gradient(circle at 64% 21%, rgba(255,255,255, 0.06) 0%, rgba(255,255,255, 0.06) 45%,transparent 45%, transparent 100%),radial-gradient(circle at 18% 4%, rgba(255,255,255, 0.06) 0%, rgba(255,255,255, 0.06) 26%,transparent 26%, transparent 100%),radial-gradient(circle at 17% 69%, rgba(255,255,255, 0.06) 0%, rgba(255,255,255, 0.06) 15%,transparent 15%, transparent 100%),radial-gradient(circle at 84% 26%, rgba(255,255,255, 0.06) 0%, rgba(255,255,255, 0.06) 45%,transparent 45%, transparent 100%),linear-gradient(45deg, rgb(255,176,37),rgb(65,74,221));
+}
+
+
+.admin{
+    width:100vw;
+    height:100vh;
+    position:relative;
+    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+}
+
+table{
+    width:90%;
+    border-collapse: collapse;
+    margin-top: 5%;
+    box-shadow: 8px 8px 24px -3px rgba(0,0,0,0.63);
+
+}
+
+
+.bookingCon h1, .tourComp h1, .program h1, .addProgram h1, .addTour h1, .reserv h1{
+    font-family: 'nav';
+    margin-top: 5%;
+    color:white;
+    font-size: 35px;
+}
+
+
+table tr th{
+    font-size: 22px;
+    color:white;
+    font-family: 'nav';
+    background: rgb(0, 58, 124);
+    height:40px
+}
+
+
+tr:nth-child(odd) td{
+    background-color: rgb(182, 182, 182);
+    color: rgb(8, 8, 8);
+}
+
+tr:nth-child(even) td{
+    color:rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 1);
+
+}
+
+td{
+    text-align: center;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+   
+}
+
+
+
+.addProgram form, .addTour form, .reserv form{
+    width:45%;
+    height:80%;
+    margin-top: 2%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    row-gap: 10px;
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.63);
+    flex-wrap: wrap;
+}
+
+.reserv form{
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+
+.overlayForm{
+    width:100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.527);
+    display: flex;
+}
+
+/* .overlayForm.active{
+    display:none;
+} */
+
+
+.guest_voucher{
+    height: 90vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle at top right, rgb(13, 141, 190) 0%, rgb(13, 141, 190) 46%,rgb(22, 153, 204) 46%, rgb(22, 153, 204) 49%,rgb(31, 166, 217) 49%, rgb(31, 166, 217) 52%,rgb(40, 178, 231) 52%, rgb(40, 178, 231) 54%,rgb(49, 190, 244) 54%, rgb(49, 190, 244) 100%);
+}
+
+
+.addTour form{
+    justify-content: center;
+    height:50%;
+    padding-top: 10px;
+}
+
+.input{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:50px;
+    width:40%;
+    border-radius: 10px;
+}
+
+input[type='text'], input[type='number'], input[type='date']{
+    height:100%;
+    width:100%;
+    border-radius: 10px;
+    outline: 2px solid rgb(241, 136, 15);
+    border: none;
+    text-align: center;
+}
+
+.addProgram label, .addTour label{
+    font-family: 'nav';
+    color:rgb(179, 96, 2);
+}
+
+.des{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prevCon{
+    display:grid;
+    height:40%;
+    place-items:center;
+    text-align:center;
+}
+
+.prevCon .wrapper{
+    height:140px;
+    width:230px;
+    border:2px dashed rgb(179, 96, 2);
+    border-radius: 10px;
+    background:white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    place-items:center;
+    position: relative;
+}
+
+.prevCon .wrapper .image{
+    position:absolute;
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.image img{
+    width: 100%;
+}
+
+.prevCon .wrapper .image img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    position: relative;
+}
+
+
+.fa-cloud-upload-alt{
+    background: -webkit-linear-gradient(left, rgb(0, 58, 124) , #f5be08);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-size: 50px;
+}
+
+.prevCon .wrapper .file-upload-text{
+    font-size:20px;
+    color: #114357;
+    font-weight: 500;
+    
+}
+
+.prevCon #custom-btn, .submit{
+    margin-top:10px;
+    width:80%;
+    height:30px;
+    display:block;
+    background-image: linear-gradient(to right, #faab00 , rgb(0, 58, 124) , #faab00);
+    border-radius: 25px;
+    font-size: 15px;
+    color:white;
+    letter-spacing: 1px;
+    text-transform:uppercase;
+    font-weight:500;
+    cursor:pointer;
+    outline: none;
+    border:0px;
+    transition:0.6s;
+    background-size:200%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.prevCon #custom-btn:hover, .submit:hover{
+    background-position:right;
+}
+
+.submit{
+    width:60%;
+}
+
+footer{
+    width:100%;
+    height:60vh;
+    background-color: rgb(25, 141, 236);
+    z-index: 90;
+    position: relative;
+    background-image: url(/uploads/wave.png);
+    display: flex;
+    color:white
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width:50%;
+    height:100%;
+    font-size: 20px;
+    font-family: 'nav';
+    row-gap: 15px;
+}
+
+.list p{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.651);
+    width:37%;
+    text-align: center;
+  
+}
+
+.list{
+    height: 100%; 
+    overflow: hidden;
+    display: flex;
+    width:50%;
+    color:white;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact{
+    width:50%;
+    height:100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+}
+
+h4, h3{
+    text-align: center;
+}
+
+.logo{
+    position:relative;
+}
+
+.intern{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}    
+.select select {
+    font-family: 'Arial';
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 9px 19px;
+    outline: 0;
+    border: 2px solid #faab00;
+    border-radius: 8px;
+    background: #fbfbfb;
+    color: #7b7b7b;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select select::-ms-expand {
+    display: none;
+}
+
+.select select:hover, .select select:focus {
+    color: #000000;
+    background: #dcdcdc;
+}
+
+.select select:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+.select_arrow {
+    position: absolute;
+    top: 19px;
+    right: 15px;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #7b7b7b transparent transparent transparent;
+}
+.select select:hover ~ .select_arrow, .select select:focus ~ .select_arrow {
+    border-top-color: #000000;
+}
+
+.voucher{
+    display:flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.voucherCon{
+    background-color: white;
+    width:75%;
+    height:50%;
+    border-radius: 10px;
+    box-shadow: 6px 6px 9px -2px rgba(0,0,0,0.57);
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+}
+
+.vbg{
+    width:60%;
+    height:100%;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.details{
+    width:40%;
+    height:100%;
+    position: relative;
+    font-family: 'nav';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 0 10px 10px 0;
+    color:white;
+    background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 2px,transparent 2px, transparent 4px),linear-gradient(135deg, rgb(165, 230, 235),rgb(29, 32, 232));
+}
+
+.vbg img{
+    width:100%;
+    height:100%
+}
+
+table tr td:last-child{
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+
+
+table a{
+    color:rgb(224, 67, 10);
+    transition:0.5s ease;
+}
+
+table a:hover{
+    color:rgb(121, 34, 3)
+
+}
+
+.loginCon{
+    height:90vh;
+    width:100vw;
+    position:relative;
+    display: flex;
+    font-family: 'nav';
+}
+
+.logImage{
+    width:55%;
+    height:100%;
+    position: relative;
+}
+
+
+.navLinks .submit{
+    background-image: linear-gradient(to right, #03d3c8 , rgb(0, 58, 124) , #03d3c8);
+    color:white
+}
+
+.navLinks .submit:hover{
+    color:white;
+}
+
+
+
+.logImage img{
+    width:100%;
+    height:100%;
+}
+
+.loginCon form{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:45%;
+    height:100%;
+    row-gap: 20px;
+}
+
+.loginCon .submit{
+    width:30%;
+}
